@@ -1,11 +1,3 @@
-# 
-<h1 align="center">30-DAYS-JAVASCRIPT-Challenge</h1>
-
-----
-
-<h2 align="center">Day 01 :Variables and Data types</h2>
-
-```
 //Activity 1 :Variable Declaration
 
 var age=20
@@ -49,23 +41,12 @@ console.log(gender);
 
 const pi=3.7
 console.log(pi);
-pi=3.70   //TypeError: Assignment to constant variable. 
+pi=3.70
 console.log(pi);
 
-Output :- 
-20
-Bittu
-false
-number
-string
-boolean
-object
-object
-object
-Male
-Female
-3.7
 
 
-```
+
+
+
 
