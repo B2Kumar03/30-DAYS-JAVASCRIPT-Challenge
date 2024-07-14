@@ -88,7 +88,7 @@ num1 = -10;
 result = num1 < 0 ? "Negative" : "Positive";
 
 
-// output :
+// Output :
         // Sum: 30
         // Different : -10
         // Multiple : -10
