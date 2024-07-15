@@ -179,7 +179,7 @@ result = num1 < 0 ? "Negative" : "Positive";
         // NOT Operator : true //
 ```
 
-<h2 align="center">Day 03 :Operators</h2>
+<h2 align="center">Day 03 : Control Structures</h2>
 
 
 ```
