@@ -73,4 +73,4 @@ console.log(year, "is leapYear :", isLeapYear);
         // c is greater
         // Wednesday
         // Number is ODD
-        // 2024 is leapYear : true
+        // 2024 is leapYear : true //
