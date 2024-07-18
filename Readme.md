@@ -423,8 +423,4 @@ function higherOrderFunction2(func1, func2, value) {
   return func1(func2(value));
 }
 
-
-
-
-
 ```
