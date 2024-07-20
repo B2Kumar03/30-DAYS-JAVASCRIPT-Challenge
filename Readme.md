@@ -666,13 +666,27 @@ console.log(multi_line);
 
 //Activity 2 :Destructing
 
+
 //use array destructing to extract the first and second elements from an
 const fruit = ["apple", "banana", "papaya", "coconut", "orange"];
 const [first_ele, second_ele] = fruit;
 console.log(`First element of fruits collection is ${first_ele}`);
 console.log(`Second element of fruits collection is ${second_ele}`);
 
+const book={
+  title:"The Great Gatsby",
+  author:"F. Scott Fitzgerald",
+  year:"1991"
+}
+const {title,author,year}=book;
+console.log(title);
+console.log(author);
+console.log(year);
+
+
+
 //Activity 3:Spread and Rest Operators
+
 
 //use the spread operator to create a new array that includes all elements of and existing array plus additional elements and log the  new array to the console
 const myArray = [1, 2, 3, 4]; //referance
@@ -727,11 +741,15 @@ console.log(person1);
 
         // First element of fruits collection is apple
         // Second element of fruits collection is banana
+        // The Great Gatsby
+        // F. Scott Fitzgerald
+        // 1991
         // [ 100, 2, 3, 4, 10, 20 ]
         // [ 1, 2, 3, 4 ]
         // 21
         // Product is : 10
         // Getdetails, Name is Bittu and age is 21 and address is Delhi
         // { name: 'Bittu', age: '21', address: 'Delhi' }
+
 
 ```
