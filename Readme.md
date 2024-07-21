@@ -1,7 +1,8 @@
-# 
+#
+
 <h1 align="center">30-DAYS-JAVASCRIPT-Challenge</h1>
 
-----
+---
 
 <h2 align="center">Day 01 :Variables and Data types</h2>
 
@@ -49,9 +50,9 @@ console.log(gender);
 
 const pi=3.7
 console.log(pi);
-pi=3.70   //TypeError: Assignment to constant variable. 
+pi=3.70   //TypeError: Assignment to constant variable.
 console.log(pi);
-Output :- 
+Output :-
 20
 Bittu
 false
@@ -181,7 +182,6 @@ result = num1 < 0 ? "Negative" : "Positive";
 
 <h2 align="center">Day 03 : Control Structures</h2>
 
-
 ```
 //Activity 1 : if-Else Statements
 
@@ -252,7 +252,7 @@ let isLeapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 console.log(year, "is leapYear :", isLeapYear);
 
 
-//Output : 
+//Output :
         // Number is positive
         // You are eligible to vote
         // c is greater
@@ -425,7 +425,6 @@ function higherOrderFunction2(func1, func2, value) {
 
 ```
 
-
 <h2 align="center">Day 06 : Arrays</h2>
 
 ```
@@ -504,7 +503,6 @@ console.log(arr5[1][1]);
 ```
 
 <h2 align="center">Day 07 : Objects</h2>
-
 
 ```
 //Activity 1:Object Creation and Access
@@ -607,7 +605,7 @@ console.log(Object.values(book1));
 //   title The Great Gatsby title The Great Gatsby
 //   author F. Scott Fitzgerald author F. Scott Fitzgerald
 //   year 2001 year 2001
-//   returnAuthorandTitle [Function (anonymous)] returnAuthorandTitle [Function (anonymous)]   
+//   returnAuthorandTitle [Function (anonymous)] returnAuthorandTitle [Function (anonymous)]
 //   updateYear [Function (anonymous)] updateYear [Function (anonymous)]
 //   PS C:\Users\hello\OneDrive\Desktop\30Days_js-challange\07_Day> node index.js
 //   Book 1: {
@@ -635,7 +633,7 @@ console.log(Object.values(book1));
 //   title The Great Gatsby title The Great Gatsby
 //   author F. Scott Fitzgerald author F. Scott Fitzgerald
 //   year 2001 year 2001
-//   returnAuthorandTitle [Function (anonymous)] returnAuthorandTitle [Function (anonymous)]   
+//   returnAuthorandTitle [Function (anonymous)] returnAuthorandTitle [Function (anonymous)]
 //   updateYear [Function (anonymous)] updateYear [Function (anonymous)]
 //   [ 'title', 'author', 'year', 'returnAuthorandTitle', 'updateYear' ]
 //   [
@@ -647,6 +645,7 @@ console.log(Object.values(book1));
 //   ]
 
 ```
+
 <h2 align="center">Day 08 : ES6 Features of js</h2>
 
 ```
@@ -753,3 +752,123 @@ console.log(person1);
 
 
 ```
+
+<h2 align="center">Day 07 : DOM Manipulation</h2>
+
+<h4> HTML  Code</h4>
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello,world</h1>
+    <h1 class="backChangeElement">Please change my backeground</h1>
+    <ul id="ulElement"></ul>
+    <h1 id="addClass">Add and Remove classlist from this element</h1>
+
+    <h1 id="changer">For change my content click on click me button</h1>
+    <button >Click me</button>
+<div style="padding: 5px;border: 1px solid black ; margin: 10px;" id="hoveMe">Hover on me</div>
+    <img
+      src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      width="100%"
+      alt=""
+      id="image"
+    />
+  </body>
+</html>
+<script src="./index.js"></script>
+
+```
+
+<h4>Output of HTML :</h4>
+<img src="https://github.com/B2Kumar03/project2Image/blob/main/image.png?raw=true" alt="Alt text" />
+
+<h4> JavaScript  Code :</h4>
+
+```
+//Activity 1 :Selection and Manipulation Elements
+
+//Selct an HTML eleent by its id and change its text
+const heading=document.getElementById("heading")
+heading.innerText="Hello,india"
+
+//Select an HTML element by its class and change its class and change its background color
+const backgroundChanger=document.getElementsByClassName("backChangeElement")
+backgroundChanger[0].style.backgroundColor="red"
+
+
+//Activity 2:Creating and Appending Elements
+
+
+//create a new div element with some text content and append it to the body
+const newDiv=document.createElement("div")
+newDiv.innerText="I am a div element"
+newDiv.id="divElemnt"
+const body=document.body
+body.append(newDiv)
+
+//create a new li element adn add it to an existing ul list
+const existingUl=document.getElementById("ulElement")
+const newLi=document.createElement("li")
+newLi.innerText="Home"
+existingUl.appendChild(newLi)
+const newLi1=document.createElement("li")
+newLi1.innerText="About"
+existingUl.appendChild(newLi1)
+
+//Activity 3:Removing element
+
+
+//Select an HTML element and remove it from the DOM
+const removingElement=document.getElementById("divElemnt")
+removingElement.remove()
+
+//remove the last child ofa specific HTML element
+const removingLastChild=document.getElementById("ulElement")
+removingLastChild.removeChild(removingLastChild.lastChild)
+
+
+//Activity 4:Modifying Attributes and classes
+
+
+//select and HTML element and change one of its attributes(eg.,src of an image)
+const image=document.getElementById("image")
+image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&s"
+
+
+//Add and remove CSS class to/form an HTML element.
+const addClass=document.getElementById("addClass")
+addClass.classList.add("addClassElement")
+addClass.classList.remove("addClassElement")
+
+
+//Activity 5:Event Handling
+
+
+//Add a click event listener to a button that changes the test content of a paragraph
+const button=document.getElementsByTagName("button")
+const paragraph=document.getElementById("changer")
+console.log(button);
+button[0].addEventListener("click",()=>{
+    paragraph.innerText="I changed Thank you !"
+})
+
+//Add a mouse event listener to and element that change its border color
+const mouse=document.getElementById("hoveMe")
+mouse.addEventListener("mouseover",()=>{
+    mouse.style.border="2px solid red"
+    })
+
+
+
+
+
+
+```
+
