@@ -753,7 +753,7 @@ console.log(person1);
 
 ```
 
-<h2 align="center">Day 07 : DOM Manipulation</h2>
+<h2 align="center">Day 09 : DOM Manipulation</h2>
 
 <h4> HTML  Code</h4>
 
