@@ -871,4 +871,128 @@ mouse.addEventListener("mouseover",()=>{
 
 
 ```
+<h2 align="center">Day 10 : Event handling</h2>
 
+HTML Code :
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event handling</title>
+  </head>
+  <body>
+    <p id="para">Frontend developer</p>
+    <button onclick="changeParaContent()" id="btn">
+      Change the Paragraph content
+    </button>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbpdV5eKcBMzjs7ltDev4YxvWvnNxcFk7wUg&s"
+      alt="natureImage"
+      id="image"
+      width="300"
+      height="200"
+      style="border-radius: 5px"
+    />
+
+    <h3
+      style="
+        background-color: green;
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+      "
+      id="heading"
+    >
+      Hover on me to change the my background color
+    </h3>
+    <input type="text" id="keyDown" />
+    <input type="text" id="input" />
+
+    <ul id="list" style="display: flex;flex-direction: column;justify-content:space-evenly;height: 200px;text-decoration: none;">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+    </ul>
+    <div id="parent">
+      <h3>Old child</h3>
+    </div>
+    <button id="addEvent">Add new child</button>
+  </body>
+</html>
+<script src="./index.js"></script>
+```
+
+Javascript Code :
+
+```
+//Activity 1:Basic event Handling
+
+//Add a click event listener to a button that changes the text content of a paragraph.
+const paragraph = document.getElementById("para");
+function changeParaContent() {
+  paragraph.textContent = "Full stack developer";
+}
+
+//Add a double-click event listener to an image that toggle its visibility
+const img = document.getElementById("image");
+img.addEventListener("dblclick", () => {
+  img.style.display = "none";
+});
+
+//Activity 2:Mouse Events
+
+//Add a mouseover event listener to an element that changes its background color
+const backgroundChanger = document.getElementById("heading");
+
+backgroundChanger.addEventListener("mouseover", () => {
+  backgroundChanger.style.backgroundColor = "black";
+});
+//Add a mouseout event listener to an element that reset its background color
+backgroundChanger.addEventListener("mouseout", () => {
+  backgroundChanger.style.backgroundColor = "green";
+});
+
+//Activity 3:Keybord Events
+
+//Add a keydown event listener to an element that logs the key pressed to the console
+const keyDown = document.getElementById("keyDown");
+keyDown.addEventListener("keydown", (e) => {
+  console.log(e.key);
+});
+
+//Add a keyup event listner to an input field that displays the current values in a paragraph
+const input = document.getElementById("input");
+const para = document.getElementById("para");
+input.addEventListener("keyup", (e) => {
+  para.textContent = e.target.value;
+});
+
+//Acitvity 5:Event Delegation
+
+//Add a click event listener to a list that logs the text content of the clicked list item using event delegation
+const list = document.getElementById("list");
+list.addEventListener("click", (e) => {
+  console.log(e.target.textContent);
+});
+
+//Add an event listener to a parent element that listens for events from dynamicaly added child elements
+const button = document.getElementById("addEvent");
+const parent=document.getElementById("parent")
+
+button.addEventListener("click", (e) => {
+    const h3=document.createElement("h3")
+    h3.innerText=`New child`
+    parent.appendChild(h3)
+});
+```
