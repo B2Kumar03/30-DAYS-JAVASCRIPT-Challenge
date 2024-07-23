@@ -79,7 +79,7 @@ async function fetchData() {
 
 //Activity 5:Concurrent Promises
 
-//Use 'Promise.all' to write for multiple promises to resolve and log all theoir values
+//Use 'Promise.all' to write for multiple promises to resolve and log all theoir value
 Promise.all([promise1, promise2, promise3, promise4])
   .then((values) => console.log(values))
   .catch((error) => console.log(error));

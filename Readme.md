@@ -871,9 +871,11 @@ mouse.addEventListener("mouseover",()=>{
 
 
 ```
+
 <h2 align="center">Day 10 : Event handling</h2>
 
 HTML Code :
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -996,3 +998,5 @@ button.addEventListener("click", (e) => {
     parent.appendChild(h3)
 });
 ```
+
+<h2 align="center">Day 11 :Promises and Async:Await</h2>
