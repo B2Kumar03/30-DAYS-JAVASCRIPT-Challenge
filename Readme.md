@@ -1242,7 +1242,7 @@ async function handleFetch() {
   }
 }
 
-```
+
 
 <h2 align="center">Day 13 :Modules</h2>
 
@@ -1347,12 +1347,5 @@ module.exports = {
     },
     mode: 'development',
 };
-
-
-
-
-
-
-
 
 ```
