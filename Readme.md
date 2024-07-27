@@ -1621,6 +1621,6 @@ function memoizedFactorial(n, cache = {}) {
     return result;
   }
 }
-console.log(memoizedFactorial(5)); // Output: 120
+console.log(memoizedFactorial(5)); Output: 120
 
 ```
